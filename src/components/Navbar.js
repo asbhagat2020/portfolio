@@ -12,6 +12,7 @@ import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
+  AiOutlineMail,
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
@@ -39,7 +40,7 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-        <p className="img-fluid logo">  Ashwin Bhagat</p>
+          <p className="img-fluid logo"> Ashwin Bhagat</p>
           {/* <img src={logo} className="img-fluid logo" alt="brand" /> */}
         </Navbar.Brand>
         <Navbar.Toggle
@@ -73,6 +74,16 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
+                to="/contact"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineMail style={{ marginBottom: "2px" }} /> Contact
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
                 to="/project"
                 onClick={() => updateExpanded(false)}
               >
@@ -85,15 +96,17 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-        
                 // as={Link}
                 target="_blank"
-                href={"https://drive.google.com/file/d/1TalRqPBPVEsNcIupbP4wWVZEtzT4aUWd/view?usp=sharing"}
+                href={
+                  "https://drive.google.com/file/d/1kqfDdhZHXL_pahBnuz61O0ipCpFvvcwk/view?usp=sharing"
+                }
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }}  /> Resume
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
-            </Nav.Item>
+                   
+            </Nav.Item>
 
             <Nav.Item className="fork-btn">
               <Button
