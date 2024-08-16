@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { AiOutlineMail, AiFillPhone } from 'react-icons/ai';
+import emailjs from '@emailjs/browser'; // Import emailjs
 import './ContactMe.css'; // External CSS for styling
 
 function ContactMe() {
@@ -18,6 +19,8 @@ function ContactMe() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false); // To handle loading state
+  const [errorMsg, setErrorMsg] = useState(''); // To handle error messages
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -52,21 +55,45 @@ function ContactMe() {
     e.preventDefault();
   
     if (validateForm()) {
-      setSubmitted(true);
-      console.log('Form Data:', formData);
+      setLoading(true); // Start loading
+      setErrorMsg(''); // Reset error message
   
-      // Reset form fields after submission
-      setFormData({
-        name: '',
-        email: '',
-        message: ''
-      });
+      // Prepare the template params for EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      };
   
-      // Optionally, reset errors if you want to clear them after a successful submission
-      setErrors({
-        name: '',
-        email: '',
-        message: ''
+      // Send email using emailjs
+      emailjs.send(
+        'service_erxdpg9', // Replace with your EmailJS service ID
+        'template_hxjf6zb', // Replace with your EmailJS template ID
+        templateParams,
+        'maYo88lFD2J5IZDeJ' // Replace with your EmailJS user ID
+      )
+      .then((response) => {
+        setSubmitted(true);
+        setLoading(false); // Stop loading
+  
+        // Reset form fields after submission
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
+  
+        // Optionally, reset errors
+        setErrors({
+          name: '',
+          email: '',
+          message: ''
+        });
+      })
+      .catch((error) => {
+        console.error('Failed to send email:', error);
+        setLoading(false); // Stop loading
+        setErrorMsg('Failed to send message. Please try again later.');
       });
     }
   };
@@ -82,8 +109,7 @@ function ContactMe() {
             <ul className="contact-details">
               <li><AiFillPhone className="contact-icon" /> +91 94233-81870</li>
               <li><AiOutlineMail className="contact-icon" /> asbhagat2020@gmail.com</li>
-              <li>
-                <FaLinkedinIn className="contact-icon" />
+              <li><FaLinkedinIn className="contact-icon" />
                 <a href="https://www.linkedin.com/in/ashwin-bt/" target="_blank" rel="noopener noreferrer">
                    Ashwin Bhagat
                 </a>
@@ -138,11 +164,12 @@ function ContactMe() {
                 />
                 <Form.Control.Feedback type="invalid">{errors.message}</Form.Control.Feedback>
               </Form.Group>
-              <Button variant="primary" type="submit" style={{marginTop:'20px'}}>
-                Submit
+              <Button variant="primary" type="submit" style={{marginTop:'20px'}} disabled={loading}>
+                {loading ? 'Sending...' : 'Submit'}
               </Button>
             </Form>
             {submitted && <div className="form-success">Thank you for reaching out! I'll get back to you soon.</div>}
+            {errorMsg && <div className="form-error">{errorMsg}</div>}
           </Col>
         </Row>
       </Container>
