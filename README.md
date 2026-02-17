@@ -1,13 +1,13 @@
 <h2 align="center">
   Portfolio Website — v2.0 <br/>
-  <a href="https://main--ashwinbhagat2020-portfolio.netlify.app/" target="_blank">
+  <a href="https://portfolio-beta-two-1h7xhb4urx.vercel.app/" target="_blank">
     🌐 ASHWIN.tech
   </a>
 </h2>
 
-<div align="center">
+<!-- <div align="center">
   <img alt="Portfolio Demo" src="./Images/readme-img1.png" />
-</div>
+</div> -->
 
 <br/>
 
@@ -30,10 +30,10 @@ This is my personal **Portfolio Website** built to showcase my:
 * Technical Skills
 * Resume & Contact Information
 
-It highlights my work as a **Full Stack MERN Developer** with experience in building scalable, real-world web applications including e-commerce platforms, dashboards, and SaaS tools.
+It highlights my work as a **Full Stack MERN Developer** with experience in building scalable, real-world web applications, including e-commerce platforms, dashboards, and SaaS tools.
 
 🔗 **Live Website:**
-👉 https://main--ashwinbhagat2020-portfolio.netlify.app/
+👉 https://portfolio-beta-two-1h7xhb4urx.vercel.app/
 
 ---
 
@@ -46,7 +46,7 @@ This project was developed using modern web technologies:
 * 🚂 Express.js
 * 🎨 React-Bootstrap
 * 🧾 CSS3
-* 🌐 Netlify Deployment
+* 🌐 Vercel Deployment
 * 💻 VS Code
 
 ---
@@ -124,7 +124,7 @@ To customize the portfolio:
 
 ## 📸 Screenshots
 
-> Add your portfolio screenshots inside `/Images` folder and update preview above.
+> Add your portfolio screenshots inside the `/Images` folder and update the preview above.
 
 ---
 
@@ -139,7 +139,7 @@ If you like this project, please consider giving it a ⭐ on GitHub — it helps
 👤 **Ashwin Bhagat**
 📧 [asbhagat2020@gmail.com](mailto:asbhagat2020@gmail.com)
 🔗 LinkedIn: https://www.linkedin.com/in/ashwin-bt/
-🌐 Portfolio: https://main--ashwinbhagat2020-portfolio.netlify.app/
+🌐 Portfolio: https://portfolio-beta-two-1h7xhb4urx.vercel.app/
 
 ---
 
