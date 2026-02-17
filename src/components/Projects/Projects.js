@@ -2,89 +2,64 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import editor from "../../Assets/Projects/home.png";
-import chatify from "../../Assets/Projects/Signin Singup.jpg";
 
-import bitsOfCode from "../../Assets/Projects/Landing Page.PNG";
+import fitbuddyImg from "../../Assets/Projects/Signin Singup.jpg";
+import kukuImg from "../../Assets/Projects/kuku_img.png";
+import realtorImg from "../../Assets/Projects/realistic_realtors.png";
 
 function Projects() {
   return (
     <Container fluid className="project-section">
       <Particle />
+
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          Professional & <strong className="purple">Personal Projects </strong>
         </h1>
+
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          Here are some production-grade and real-world applications I’ve built
+          and contributed to.
         </p>
+
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+
+          {/* ================= KUKU PROJECT ================= */}
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={kukuImg}
               isBlog={false}
-              title="FitBuddy"
-              description="FitBuddy is a fitness app for tracking workouts, meals, and progress. It offers workout logging, nutritional tracking, scheduling, and personalized plans. Users can also benefit from social features and professional advice to achieve their fitness goals."
+              title="Kuku — Resale E-commerce Platform"
+              description="Contributed as a Full Stack Developer in building a scalable resale marketplace using Next.js, Node.js, Express.js, and MongoDB. Integrated Stripe payment gateway with webhooks, developed seller dashboards with real-time earnings, and built logistics & location-based APIs. Optimized AWS S3 media delivery, improving load performance significantly."
+              ghLink=""
+              demoLink=""
+            />
+          </Col>
+
+          {/* ================= REALISTIC REALTORS ================= */}
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={realtorImg}
+              isBlog={false}
+              title="Realistic Realtors — Property Platform"
+              description="Developed a high-performance real estate platform frontend using React.js. Integrated RESTful APIs for real-time property listings, advanced search filters, and location-based discovery. Implemented performance optimizations like lazy loading and memoization to enhance user engagement and reduce page load time."
+              ghLink=""
+              demoLink=""
+            />
+          </Col>
+
+          {/* ================= FITBUDDY ================= */}
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={fitbuddyImg}
+              isBlog={false}
+              title="FitBuddy — Fitness Tracking Application"
+              description="Built a full-stack MERN fitness tracking application with JWT authentication, workout logging, nutrition tracking, and progress analytics. Designed RESTful APIs, optimized MongoDB queries, and created a responsive React.js dashboard for real-time user insights."
               ghLink="https://github.com/shobhit9742/Union_Ubuntu_046-"
               demoLink="https://union-ubuntu-046.vercel.app/"
             />
           </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={bitsOfCode}
-              isBlog={false}
-              title="Edu-School"
-              description="The EduSchool Course Subscription Plan offers unlimited course access for a monthly or annual fee, featuring user account management, secure payment integration, and content access control. Personalized dashboards and progress tracking enhance user experience, while analytics tools monitor subscription metrics and user engagement."
-              ghLink="https://github.com/JagannathGariNavya/EduSchool"
-              demoLink="https://edu-school-k4id.vercel.app/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={editor}
-              isBlog={false}
-              title="Nobroker"
-              description="This project is a clone of the homepage of NoBroker-Services. This project aims to recreate the visual layout and design and functionality of the original website's homepage."
-              ghLink="https://github.com/Sartik0709/Compiler-Chintan-2345"
-              demoLink="https://imaginative-pixie-6e83c9.netlify.app/"              
-            />
-          </Col>
-
-          {/* <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={leaf}
-              isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
-            />
-          </Col> */}
-{/* 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col> */}
-
-          {/* <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
-            />
-          </Col> */}
         </Row>
       </Container>
     </Container>

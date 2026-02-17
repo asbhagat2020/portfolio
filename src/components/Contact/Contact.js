@@ -1,8 +1,9 @@
+
+
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { AiOutlineMail, AiFillPhone } from 'react-icons/ai';
-import emailjs from '@emailjs/browser'; // Import emailjs
 import './ContactMe.css'; // External CSS for styling
 
 function ContactMe() {
@@ -19,8 +20,8 @@ function ContactMe() {
   });
 
   const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false); // To handle loading state
-  const [errorMsg, setErrorMsg] = useState(''); // To handle error messages
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -51,53 +52,57 @@ function ContactMe() {
     return valid;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
   
     if (validateForm()) {
-      setLoading(true); // Start loading
-      setErrorMsg(''); // Reset error message
-  
-      // Prepare the template params for EmailJS
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        message: formData.message,
-      };
-  
-      // Send email using emailjs
-      emailjs.send(
-        'service_erxdpg9', // Replace with your EmailJS service ID
-        'template_hxjf6zb', // Replace with your EmailJS template ID
-        templateParams,
-        'maYo88lFD2J5IZDeJ' // Replace with your EmailJS user ID
-      )
-      .then((response) => {
-        setSubmitted(true);
-        setLoading(false); // Stop loading
-  
-        // Reset form fields after submission
-        setFormData({
-          name: '',
-          email: '',
-          message: ''
+      setLoading(true);
+      setErrorMsg('');
+      setSubmitted(false);
+
+      try {
+        const response = await fetch('https://formspree.io/f/xeelkakg', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            message: formData.message
+          })
         });
-  
-        // Optionally, reset errors
-        setErrors({
-          name: '',
-          email: '',
-          message: ''
-        });
-      })
-      .catch((error) => {
+
+        if (response.ok) {
+          setSubmitted(true);
+          setLoading(false);
+          
+          // Reset form fields after submission
+          setFormData({
+            name: '',
+            email: '',
+            message: ''
+          });
+          
+          // Reset errors
+          setErrors({
+            name: '',
+            email: '',
+            message: ''
+          });
+
+          // Hide success message after 5 seconds
+          setTimeout(() => setSubmitted(false), 5000);
+        } else {
+          throw new Error('Failed to send message');
+        }
+      } catch (error) {
         console.error('Failed to send email:', error);
-        setLoading(false); // Stop loading
+        setLoading(false);
         setErrorMsg('Failed to send message. Please try again later.');
-      });
+      }
     }
   };
-  
 
   return (
     <Container fluid className="contact-me-section" id="contact">
