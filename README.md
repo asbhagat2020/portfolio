@@ -1,75 +1,150 @@
 <h2 align="center">
-  Portfolio Website - v2.0<br/>
-  <a href="https://main--ashwinbhagat2020-portfolio.netlify.app/" target="_blank">ASHWIN.tech</a>
+  Portfolio Website — v2.0 <br/>
+  <a href="https://main--ashwinbhagat2020-portfolio.netlify.app/" target="_blank">
+    🌐 ASHWIN.tech
+  </a>
 </h2>
+
 <div align="center">
-  <!-- <img alt="Demo" src="./Images/readme-img1.png" /> -->
+  <img alt="Portfolio Demo" src="./Images/readme-img1.png" />
 </div>
 
 <br/>
 
-<center>
+<div align="center">
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
-![GitHub Repo stars](https://img.shields.io/github/stars/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge) &nbsp;
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)  
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)  
+[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com)  
 
+</div>
 
-</center>
+---
 
-<h3 align="center">
-    🔹
-    <a href="https://github.com/asbhagat2020/portfolio/issues">Report Bug</a> &nbsp; &nbsp;
-    🔹
-    <a href="https://github.com/asbhagat2020/portfolio/issues">Request Feature</a>
-</h3>
+## 🚀 About This Project
 
-## TL;DR
+This is my personal **Portfolio Website** built to showcase my:
 
-You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [asbhagat2020](https://github.com/asbhagat2020/portfolio). Thanks!
+* Full Stack Development Projects
+* Production Experience
+* Technical Skills
+* Resume & Contact Information
 
-## Built With
+It highlights my work as a **Full Stack MERN Developer** with experience in building scalable, real-world web applications including e-commerce platforms, dashboards, and SaaS tools.
 
-My personal portfolio <a href="https://main--ashwinbhagat2020-portfolio.netlify.app/" target="_blank">ashwin.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
+🔗 **Live Website:**
+👉 https://main--ashwinbhagat2020-portfolio.netlify.app/
 
-This project was built using these technologies.
+---
 
-- React.js
-- Node.js
-- Express.js
-- CSS3
-- VsCode
-- Netlify
+## 🛠️ Built With
 
-## Features
+This project was developed using modern web technologies:
 
-**📖 Multi-Page Layout**
+* ⚛️ React.js
+* 🟢 Node.js
+* 🚂 Express.js
+* 🎨 React-Bootstrap
+* 🧾 CSS3
+* 🌐 Netlify Deployment
+* 💻 VS Code
 
-**🎨 Styled with React-Bootstrap and Css with easy to customize colors**
+---
 
-**📱 Fully Responsive**
+## ✨ Features
 
-## Getting Started
+* 📖 Multi-Page Layout
+* 🎨 Fully Customizable UI
+* 📱 Fully Responsive Design
+* 🧑‍💻 Projects Showcase Section
+* 🛠 Tech Stack & Tools Display
+* 📊 GitHub Integration
+* 📄 Resume Download
+* 📬 Contact Form
 
-Clone down this repository. You will need `node.js` and `git` installed globally on your machine.
+---
 
-## 🛠 Installation and Setup Instructions
+## 📂 Project Structure
 
-1. Installation: `npm install`
+```
+src/
+ ┣ components/
+ ┃ ┣ Home/
+ ┃ ┣ About/
+ ┃ ┣ Projects/
+ ┃ ┣ Contact/
+ ┃ ┗ Shared UI
+ ┣ Assets/
+ ┣ Styles/
+ ┗ App.js
+```
 
-2. In the project directory, you can run: `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits.
+## ⚙️ Installation & Setup
 
-## Usage Instructions
+Clone the repository and run locally:
 
-Open the project folder and Navigate to `/src/components/`. <br/>
-You will find all the components used and you can edit your information accordingly.
+```bash
+# Clone repo
+git clone https://github.com/asbhagat2020/portfolio.git
 
-### Show your support
+# Navigate to project
+cd portfolio
 
-<!-- Give a ⭐ if you like this website!
+# Install dependencies
+npm install
 
+# Run development server
+npm start
+```
+
+App will run on:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 🧑‍💻 Usage
+
+To customize the portfolio:
+
+1. Go to `/src/components/`
+2. Update:
+
+   * Personal Info
+   * Projects
+   * Skills
+   * Resume
+3. Replace images in `/src/Assets/`
+
+---
+
+## 📸 Screenshots
+
+> Add your portfolio screenshots inside `/Images` folder and update preview above.
+
+---
+
+## 🌟 Support
+
+If you like this project, please consider giving it a ⭐ on GitHub — it helps and motivates me to build more!
+
+---
+
+## 📬 Contact
+
+👤 **Ashwin Bhagat**
+📧 [asbhagat2020@gmail.com](mailto:asbhagat2020@gmail.com)
+🔗 LinkedIn: https://www.linkedin.com/in/ashwin-bt/
+🌐 Portfolio: https://main--ashwinbhagat2020-portfolio.netlify.app/
+
+---
+
+<div align="center">
+
+### 🚀 Built & Designed by Ashwin Bhagat
+
+</div>
