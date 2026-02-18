@@ -1,8 +1,6 @@
 <h2 align="center">
-  Portfolio Website — v2.0 <br/>
-  <a href="https://portfolio-beta-two-1h7xhb4urx.vercel.app/" target="_blank">
-    🌐 ASHWIN.tech
-  </a>
+  Portfolio Website - v2.0<br/>
+  <a href="https://portfolio-beta-two-1h7xhb4urx.vercel.app/" target="_blank">ASHWIN.tech</a>
 </h2>
 
 <!-- <div align="center">
@@ -19,39 +17,43 @@
 
 </div>
 
----
+<br/>
 
-## 🚀 About This Project
+<center>
 
-This is my personal **Portfolio Website** built to showcase my:
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) &nbsp;
+[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
+![GitHub Repo stars](https://img.shields.io/github/stars/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge) &nbsp;
 
-* Full Stack Development Projects
-* Production Experience
-* Technical Skills
-* Resume & Contact Information
 
-It highlights my work as a **Full Stack MERN Developer** with experience in building scalable, real-world web applications, including e-commerce platforms, dashboards, and SaaS tools.
+</center>
 
-🔗 **Live Website:**
-👉 https://portfolio-beta-two-1h7xhb4urx.vercel.app/
+<h3 align="center">
+    🔹
+    <a href="https://github.com/asbhagat2020/portfolio/issues">Report Bug</a> &nbsp; &nbsp;
+    🔹
+    <a href="https://github.com/asbhagat2020/portfolio/issues">Request Feature</a>
+</h3>
 
----
+## TL;DR
 
-## 🛠️ Built With
+You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [asbhagat2020](https://github.com/asbhagat2020/portfolio). Thanks!
 
-This project was developed using modern web technologies:
+## Built With
 
-* ⚛️ React.js
-* 🟢 Node.js
-* 🚂 Express.js
-* 🎨 React-Bootstrap
-* 🧾 CSS3
-* 🌐 Vercel Deployment
-* 💻 VS Code
+My personal portfolio <a href="https://portfolio-beta-two-1h7xhb4urx.vercel.app/" target="_blank">ashwin.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
 
----
+This project was built using these technologies.
 
-## ✨ Features
+- React.js
+- Node.js
+- Express.js
+- CSS3
+- VsCode
+- Netlify
+
+## Features
 
 * 📖 Multi-Page Layout
 * 🎨 Fully Customizable UI

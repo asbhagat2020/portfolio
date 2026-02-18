@@ -96,7 +96,7 @@ function NavBar() {
                 // as={Link}
                 target="_blank"
                 href={
-                  "https://drive.google.com/file/d/1_eAknHTArWGk66ZB0PX-Ly4L0QKmNaa9/view?usp=sharing"
+                  "https://drive.google.com/file/d/18TupcahZ-O49wtBCvVFpWROj_ct86gp9/view?usp=sharing"
                 }
                 onClick={() => updateExpanded(false)}
               >
