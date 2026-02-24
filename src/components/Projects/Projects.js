@@ -6,6 +6,7 @@ import Particle from "../Particle";
 import fitbuddyImg from "../../Assets/Projects/Signin Singup.jpg";
 import kukuImg from "../../Assets/Projects/kuku_img.png";
 import realtorImg from "../../Assets/Projects/realistic_realtors.png";
+import bookmarkImg from "../../Assets/Projects/bookmark.png";         
 
 function Projects() {
   return (
@@ -23,9 +24,8 @@ function Projects() {
         </p>
 
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-
           {/* ================= KUKU PROJECT ================= */}
-          <Col md={4} className="project-card">
+          <Col md={6} className="project-card">
             <ProjectCard
               imgPath={kukuImg}
               isBlog={false}
@@ -37,7 +37,7 @@ function Projects() {
           </Col>
 
           {/* ================= REALISTIC REALTORS ================= */}
-          <Col md={4} className="project-card">
+          <Col md={6} className="project-card">
             <ProjectCard
               imgPath={realtorImg}
               isBlog={false}
@@ -49,17 +49,28 @@ function Projects() {
           </Col>
 
           {/* ================= FITBUDDY ================= */}
-          <Col md={4} className="project-card">
+          <Col md={6} className="project-card">
             <ProjectCard
               imgPath={fitbuddyImg}
               isBlog={false}
               title="FitBuddy — Fitness Tracking Application"
               description="Built a full-stack MERN fitness tracking application with JWT authentication, workout logging, nutrition tracking, and progress analytics. Designed RESTful APIs, optimized MongoDB queries, and created a responsive React.js dashboard for real-time user insights."
-              ghLink="https://github.com/shobhit9742/Union_Ubuntu_046-"
+              ghLink="https://github.com/shobhit9742/FitBuddy"
               demoLink="https://union-ubuntu-046.vercel.app/"
             />
           </Col>
 
+          {/* ================= SMART BOOKMARK APP ================= */}
+          <Col md={6} className="project-card">
+            <ProjectCard
+              imgPath={bookmarkImg}
+              isBlog={false}
+              title="Smart Bookmark App — Real-Time Manager"
+              description="Built a full-stack bookmark manager using Next.js (App Router) and Supabase with Google OAuth authentication. Implemented Row Level Security (RLS) for user-specific private data protection and integrated Supabase Realtime to sync bookmarks instantly across multiple tabs. Deployed securely on Vercel with environment-based configuration."
+              ghLink="https://github.com/asbhagat2020/smart-bookmark-app"
+              demoLink="https://smart-bookmark-app-7s9h.vercel.app/"
+            />
+          </Col>
         </Row>
       </Container>
     </Container>

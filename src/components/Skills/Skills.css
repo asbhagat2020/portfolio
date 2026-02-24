@@ -1,0 +1,38 @@
+.skills-section {
+  margin-top: 100px;   /* FIX for fixed navbar */
+  padding: 60px 0;
+  color: white;
+  min-height: 100vh;
+}
+
+.skills-heading {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.2rem;
+}
+
+.tools-heading {
+  margin-top: 80px;
+}
+
+.purple {
+  color: #6f42c1;
+}
+
+/* Improve skill cards look */
+.tech-icons {
+  font-size: 4rem;
+  margin: 20px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(111, 66, 193, 0.4);
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.tech-icons:hover {
+  transform: translateY(-8px);
+  border-color: #6f42c1;
+  box-shadow: 0 0 20px rgba(111, 66, 193, 0.4);
+}

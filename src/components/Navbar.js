@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+import { AiOutlineTool } from "react-icons/ai";
 import { CgGitFork } from "react-icons/cg";
 import {
   AiFillStar,
@@ -71,10 +72,10 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/contact"
+                to="/skills"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineMail style={{ marginBottom: "2px" }} /> Contact
+                <AiOutlineTool style={{ marginBottom: "2px" }} /> Skills
               </Nav.Link>
             </Nav.Item>
 
@@ -93,6 +94,16 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
+                as={Link}
+                to="/contact"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineMail style={{ marginBottom: "2px" }} /> Contact
+              </Nav.Link>
+            </Nav.Item>
+
+            {/* <Nav.Item>
+              <Nav.Link
                 // as={Link}
                 target="_blank"
                 href={
@@ -102,8 +113,17 @@ function NavBar() {
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
-            
-            </Nav.Item>
+            </Nav.Item> */}
+
+            <Nav.Link
+              href="/Ashwin_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              onClick={() => updateExpanded(false)}
+            >
+              <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+            </Nav.Link>
 
             <Nav.Item className="fork-btn">
               <Button
